@@ -5,6 +5,12 @@ const pageOne = document.querySelector(".pageOne")
 const pageTwo = document.querySelector(".pageTwo")
 const imgBackground = document.querySelector(".imgBackground")
 
+const borderBox = document.querySelector(".borderBox")
+const borderTop = document.querySelector(".border-top")
+const borderBottom = document.querySelector(".border-bottom")
+const borderLeft = document.querySelector(".border-left")
+const borderRight = document.querySelector(".border-right")
+
 const TL = gsap.timeline()
 TL
 .to(img1, {y:-500, delay:1})
@@ -14,3 +20,8 @@ TL
 .to(pageOne, {y:"-100vh", duration:1.5, delay:1}, 5)
 .to(pageTwo, {bottom:"-0vh", duration:1.5}, 6)
 .to(imgBackground, {filter:"blur(20px)", duration:2})
+.to(borderTop, {bottom:"0px", duration:0.5})
+.to(borderLeft, {right:"0px", duration:0.5})
+.to(borderRight, {left:"0px", duration:0.5})
+.to(borderBottom, {top:"0px", duration:0.5})
+.to(borderBox, {scaleX: 1.3})

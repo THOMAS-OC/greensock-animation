@@ -26,9 +26,16 @@ section {
     bottom: -100vh;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imgBackground{
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -67,4 +74,47 @@ section {
     width: 100%;
     height: 100%;
     z-index: 2;
+}
+
+.borderBox {
+    position: relative;
+    height: 800px;
+    width: 500px;
+    background-color: transparent;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.border{
+    position: absolute;
+    background-color: whitesmoke;
+    z-index: 4;
+}
+
+.border-left{
+    bottom: 0;
+    right: -150px;
+    width: 150px;
+    height: 3px;
+}
+
+.border-right{
+    top: 0;
+    left: -150px;
+    width: 150px;
+    height: 3px;
+}
+
+.border-top{
+    bottom: -150px;
+    right: 0;
+    width: 3px;
+    height: 150px;
+}
+
+.border-bottom{
+    top: -150px;
+    left: 0;
+    width: 3px;
+    height: 150px;
 }
