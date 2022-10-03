@@ -1,0 +1,16 @@
+const img1 = document.querySelector(".img1")
+const rideauBordeau = document.querySelector(".transition")
+const img2 = document.querySelector(".img2")
+const pageOne = document.querySelector(".pageOne")
+const pageTwo = document.querySelector(".pageTwo")
+const imgBackground = document.querySelector(".imgBackground")
+
+const TL = gsap.timeline()
+TL
+.to(img1, {y:-500, delay:1})
+.to(rideauBordeau, {y:-500, delay:1.5})
+.to(rideauBordeau, {y:-1000, delay:1.5}, 3)
+.to(img2, {y:-500, delay:1}, 3)
+.to(pageOne, {y:"-100vh", duration:1.5, delay:1}, 5)
+.to(pageTwo, {bottom:"-0vh", duration:1.5}, 6)
+.to(imgBackground, {filter:"blur(20px)", duration:2})
