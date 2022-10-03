@@ -11,6 +11,11 @@ const borderBottom = document.querySelector(".border-bottom")
 const borderLeft = document.querySelector(".border-left")
 const borderRight = document.querySelector(".border-right")
 
+
+const ligneVertical = document.querySelector(".ligneVertical")
+const titre = document.querySelector("h1")
+const button = document.querySelector("a")
+
 const TL = gsap.timeline()
 TL
 .to(img1, {y:-500, delay:1})
@@ -20,8 +25,9 @@ TL
 .to(pageOne, {y:"-100vh", duration:1.5, delay:1}, 5)
 .to(pageTwo, {bottom:"-0vh", duration:1.5}, 6)
 .to(imgBackground, {filter:"blur(20px)", duration:2})
+.to(borderBox, {opacity: 1})
 .to(borderTop, {bottom:"0px", duration:0.5})
 .to(borderLeft, {right:"0px", duration:0.5})
 .to(borderRight, {left:"0px", duration:0.5})
 .to(borderBottom, {top:"0px", duration:0.5})
-.to(borderBox, {scaleX: 1.3})
+.to(borderBox, {backgroundColor: "#00000078"})
